@@ -1,0 +1,505 @@
+/*header*/
+html,body {
+    padding:0;
+    margin:0;
+    height:auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    background-color: peru;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #menu, #menu ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-align: center;
+  }
+  #logoheader{
+    width: 200px;
+  }
+  #menu li {
+    display:inline-block;
+    vertical-align: top;
+    position: relative;
+  
+  }
+  #menu li li {
+    display:inherit;
+  }
+  #menu ul li a{
+    width: 160px;
+  }
+  #menu a {
+    display:block;
+    padding:5px 50px;
+    text-decoration: none;
+    color:#fff;
+    font-family: 'TravelingTypewriter';
+  }
+  .imgflag {
+    width: 40px;
+    float: left;
+    padding-right: 3px;
+  }
+  #menu ul li a {
+    padding:5px 8px;
+  }
+  #menu ul {
+    position: absolute;
+    z-index: 1000;
+    min-width:100%;
+    white-space: nowrap;
+    text-align: left;
+  }
+  #menu ul ul {
+    left:100%;
+    top:0;
+    overflow: hidden;
+    max-width: 0;
+    min-width: 0;
+    transition: 0.3s all;
+  }
+  #menu ul li:hover ul {
+    max-width: 50em;
+  }
+  #menu ul li {
+    max-height:0;
+    overflow: hidden;
+    transition:all 0.8s;
+  }
+  #menu li li li {
+    max-height: inherit;
+  }
+  #menu li:hover li {
+    max-height: 15em;
+    overflow: visible;
+  }
+  /* background des liens menus */
+  .menu-1 {
+    background-color:  #3c3b6e;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top:120px;
+    margin-right:50px;
+  }
+  .menu-1 li {
+    background:dimgray;
+  }
+  .menu-1 ul{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .menu-1 li:hover {
+    background:red;
+  }
+  .menu-2 {
+    background-color: #3c3b6e;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top:120px;
+    margin-left:50px;
+  }
+  .menu-2 li {
+    background:dimgray;
+  }
+  .menu-2 li:hover {
+    background:red;
+  }
+  .menu-2 ul{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+
+
+
+/*Page Grece*/
+
+/*partie du haut avec le background*/
+#maingrece {
+    cursor: context-menu;
+}
+#grece {
+    background-image: url("../images/img-grèce/grece-background.jpg");
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+#itineraire {
+    font-family: courier;
+    height: 150vh;
+    color: rgb(240, 240, 240);
+    display: grid;
+    place-items: center;
+    position: relative; /*passe par-dessus les feuilles qui tombent*/
+}
+
+#itineraire h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 119px;
+}
+
+
+/*guirlande de fleurs*/
+.guirlande {
+    display: flex;
+    background-image: url("img/guirlande.png");
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+   justify-content: center;
+    height: 10vh;
+    width: 100%;
+}
+
+.guirlande img {
+    height: 13vh;
+    
+    /*position: relative;*/
+}
+
+
+/*animation des feuilles*/
+#fueilles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.set {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.set div {
+    display: block;
+    position: absolute;
+}
+.set div:nth-child(1) {
+    left: 20%;
+    animation: animate 25s linear infinite;
+    animation-delay: -2s;
+}
+.set div:nth-child(2) {
+    left: 50%;
+    animation: animate 20s linear infinite;
+    animation-delay: -7s;
+}
+.set div:nth-child(3) {
+    left: 70%;
+    animation: animate 20s linear infinite;
+    animation-delay: -4s;
+}
+.set div:nth-child(4) {
+    left: 0%;
+    animation: animate 15s linear infinite;
+    animation-delay: -5s;
+}
+.set div:nth-child(5) {
+    left: 85%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10s;
+}
+.set div:nth-child(6) {
+    left: 0%;
+    animation: animate 12s linear infinite;
+    animation-delay: -9s;
+}
+.set div:nth-child(7) {
+    left: 15%;
+    animation: animate 14s linear infinite;
+    animation-delay: -8s;
+}
+.set div:nth-child(8) {
+    left: 60%;
+    animation: animate 15s linear infinite;
+    animation-delay: -4s;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    2% {
+        opacity: 1;
+    }
+    10% {
+        transform: translateX(20px) rotate(20deg);
+    }
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(180deg);
+    }
+    80% {
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+
+}
+.set2 {
+    transform: scale(1.3) rotateY(180deg);
+    filter: blur(3px);
+}
+
+
+/*Partie conenu avec les section, articles, ...*/
+#contenu {
+    position: relative; /*les feuilles passent derrière*/
+    
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.section {
+    display: grid;
+    place-items: center;
+    text-align: justify;
+    padding-top: 4em;
+    padding-bottom: 2em;
+}
+article {
+    width: 80%;
+}
+.flex{
+  display: flex;
+  
+}
+.flex p {
+  margin: 1%;
+  
+}
+p{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+b {
+    color: #3d43ff;
+}
+#pres p::first-letter, #places p::first-letter, #food p::first-letter {
+    color: #BF3604;
+    margin-right : 5px;
+    font-size: 3em;
+    font-family: 'Fredericka the Great', cursive;
+    line-height: 0;
+}
+.surlignage {
+    line-height: 0;
+    box-shadow: inset 0px -8px #ff913d;
+}
+#pres a, #places a, #food a {
+    color: currentColor;
+    text-decoration: underline;
+    transition: 0.4s ease;
+}
+#pres a:hover, #places a:hover, #food a:hover {
+    box-shadow: inset 0px -1em #ff913d; 
+}
+.titres {
+    width: 90%;
+}
+.titres h2 {
+    display: inline;
+    font-family: courier;
+    margin-bottom: 2em;
+}
+.titres h5 {
+    display: inline;
+}
+
+#places h3, #food h3 {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    text-align: right;
+}
+#places img, #food img {
+    max-width: 100%;
+    padding-bottom: 2px;
+}
+#places p, #food p {
+    margin-top: 2em;
+    width: 80%;
+}
+/*iframe place d'armes*/
+#plcarmes iframe {
+  width: 100%;
+  height: 90vh;
+}
+
+/*css formulaire*/
+#formulaire {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#formulaire form {
+    width: 35%;
+    border: rgba(255, 137, 46, 0.5) 1px solid;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 40px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(240, 240, 240, 0.7);
+}
+#formulaire form div {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+#formulaire form div input, #formulaire form div select, #formulaire form div textarea {
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 137, 46, 0.5);
+    width: 100%;
+}
+
+#formulaire button {
+    background: #ff913d;
+    border: none;
+    padding: 0 24px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+#area {
+    width: 100%;
+    height: 5em;
+}
+
+#formulaire img {
+    width: 20%;
+    border-radius: 15px;
+}
+footer {
+    position: relative;
+}
+
+
+
+.art{
+    display: flex;
+   
+}
+
+
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    color: antiquewhite;
+  }
+  .copyright{
+    padding-left:20px;
+  }
+  .copyright p{
+    font-family: 'Fragmentcore';
+  }
+  .topbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .topbutton:hover{
+    opacity: 0.3;
+  }
+  .topbutton img{
+    height: 40px;
+    width: 40px;
+  }
+  .topbutton a:link{
+    font-family: 'TravelingTypewriter';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  .topbutton a:visited{
+    font-family: 'TravelingTypewriter';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  .topbutton a:active{
+    font-family: 'TravelingTypewriter';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+
+
+  /*--media queries--*/
+  @media screen and (max-width:500px){
+    #menu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #menu li {
+      display: block;
+    }
+    
+    #menu ul {
+      position: static;
+    }
+    .menu-1
+    {
+      margin-top: 5px;
+      margin-right: 0px;
+    }
+    .menu-2
+    {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-bottom: 5px;
+  }
+  
+
+    .guirlande img {
+      height: 5vh;
+      /*position: relative;*/
+  }
+  #places p, #food p {
+    margin-top: 2em;
+    width: 100%;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+iframe{
+  width: 100%;
+}
+#plcarmes iframe {
+  width: 100%;
+  height: 50vh;
+}
+  }
+
+ 
